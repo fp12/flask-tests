@@ -1,0 +1,10 @@
+*.pyc
+*.pyd
+*.c
+*.so
+.DS_Store
+build
+dist
+.vs
+venv*
+*.pyproj
