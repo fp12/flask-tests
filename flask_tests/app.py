@@ -1,6 +1,6 @@
 from flask import Flask
 
-from rest.base import api
+from rest import api
 
 
 app = Flask(__name__)
