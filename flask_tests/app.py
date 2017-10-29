@@ -1,10 +1,10 @@
 from flask import Flask
 
-from rest import api
+from rest import blueprint as api
 
 
 app = Flask(__name__)
-api.init_app(app)
+app.register_blueprint(api, url_prefix='/api/v1')
 
 
 @app.route('/')
