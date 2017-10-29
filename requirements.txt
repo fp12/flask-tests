@@ -1,6 +1,7 @@
 flask
-flask-RESTPlus
+flask-restplus
 flask-bootstrap
+flask-pure
 flask-nav
 flask-debugtoolbar
 flask-appconfig

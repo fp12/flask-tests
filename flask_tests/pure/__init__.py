@@ -1,1 +1,1 @@
-from .pure_demo import blueprint  # noqa
+from .pure_demo import blueprint, setup  # noqa
