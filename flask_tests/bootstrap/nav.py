@@ -12,8 +12,8 @@ nav = Nav()
 # navbar has an usual amount of Link-Elements, more commonly you will have a
 # lot more View instances.
 nav.register_element('top', Navbar(
-    View('Title', 'bootstrap_.index'),
-    View('Home', 'bootstrap_.index'),
+    View('Title', 'bootstrap_demo.index'),
+    View('Home', 'bootstrap_demo.index'),
     # View('Forms Example', '.example_form'),
     # View('Debug-Info', 'debug.debug_root'),
     Subgroup(

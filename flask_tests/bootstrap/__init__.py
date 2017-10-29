@@ -1,1 +1,1 @@
-from .bootstrap import blueprint  # noqa
+from .bootstrap_demo import blueprint  # noqa

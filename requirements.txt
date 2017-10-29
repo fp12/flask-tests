@@ -3,3 +3,4 @@ flask-RESTPlus
 flask-bootstrap
 flask-nav
 flask-debugtoolbar
+flask-appconfig
