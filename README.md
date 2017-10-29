@@ -2,7 +2,7 @@
 
 What I want to test:
 * ~~Restplus + swagger~~
-* bootstrap css or purecss
+* bootstrap css and purecss
 * SQLAlchemy
 * Blueprints
 * Streaming to clients
