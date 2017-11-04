@@ -1,5 +1,6 @@
 flask
 flask-restplus
+flask-sqlalchemy
 flask-bootstrap
 flask-pure
 flask-nav

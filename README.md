@@ -3,10 +3,12 @@
 What I want to test:
 * ~~Restplus + swagger~~
 * ~~bootstrap css and purecss~~
-* SQLAlchemy
-* Blueprints
+* ~~SQLAlchemy~~
+* migrate / Alembic
+* ~~Blueprints~~
 * Streaming to clients
   * socket.io
   * bokeh
+* Redis
 
 License: MIT
