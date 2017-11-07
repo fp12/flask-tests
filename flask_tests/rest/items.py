@@ -1,4 +1,5 @@
 from flask_restplus import Namespace, Resource, fields
+from flask_socketio import emit
 
 from database import db
 from database.item import Item
@@ -36,6 +37,7 @@ class ItemsRes(Resource):
             new_item = Item(name)
             db.session.add(new_item)
             db.session.commit()
+            emit('receive_data', {'name': name}, broadcast=True, namespace='/events')
             return new_item, 201
 
 

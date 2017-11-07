@@ -1,0 +1,51 @@
+{%- extends "bootstrap/base.html" %}
+{% block title %} Tests wit SocketIO{% endblock %}
+
+{% block head %}
+{{super()}}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+{%- endblock %}
+
+{% block body %}
+{{super()}}
+
+<p><button class="btn btn-primary" id="connect">Connect</button></p>
+<div id="once_connected">
+	<span id="socketio-info">placeholder</span>
+</div> 
+
+
+<script type="text/javascript" charset="utf-8">
+    var socket = null;
+	$('#connect').click(function() {
+		if (!socket) {
+			$('#connect').text('Disconnect');
+			socket = io.connect('http://' + document.domain + ':' + location.port + '/events');
+
+			socket.on('connect', function() {
+				$('#socketio-info').text('sending connect');
+                socket.emit('status', {status: 'I\'m connected!'});
+            });
+			
+			socket.on('receive_data', function(data) {
+				console.log(data);
+				$('#socketio-info').text('Received something ' + data.name);
+			});
+			
+			socket.on('status', function(data) {
+				$('#socketio-info').text(data.status);
+			});
+		}
+		else {
+			socket.disconnect();
+			socket = null;
+			$('#connect').text('Connect');
+			$('#socketio-info').text('disconnected');
+		}
+	});
+</script>
+{% endblock %}
+
+{% block navbar %}
+{{ nav.top.render() }}
+{% endblock %}

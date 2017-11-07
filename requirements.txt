@@ -1,3 +1,4 @@
+eventlet
 flask
 flask-restplus
 flask-sqlalchemy
@@ -6,3 +7,4 @@ flask-pure
 flask-nav
 flask-debugtoolbar
 flask-appconfig
+flask-socketio

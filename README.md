@@ -10,5 +10,6 @@ What I want to test:
   * socket.io
   * bokeh
 * Redis
+* marshmallow
 
 License: MIT
